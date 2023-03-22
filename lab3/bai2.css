@@ -1,20 +1,43 @@
-input[type="button"]{
-    background-color: #000000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+.tong{
+width: 500px;
+    height: 600px;
+	padding: 12px 20px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	border: 2px solid #dfa110;
+	border-radius: 4px;
+    background-color: rgb(160, 246, 241);
+}
+.maytinh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+#result {
+    width: 300px;
+    height: 50px;
+    font-size: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #eee;
     cursor: pointer;
 }
-input[type="text"] {
-    width: 250px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+button:hover {
+    background-color: #e23939;
 }

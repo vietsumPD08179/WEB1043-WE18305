@@ -8,29 +8,38 @@
     <link rel="stylesheet" href="bai2.css">
 </head>
 <body>
-    <h2>Calculator</h2>
-	<form>
-		<input type="text" id="result" name="result" placeholder="0" readonly>
-		<br>
-		<input type="button" value="1" onclick="document.getElementById('result').value+='1'">
-		<input type="button" value="2" onclick="document.getElementById('result').value+='2'">
-		<input type="button" value="3" onclick="document.getElementById('result').value+='3'">
-		<input type="button" value="+" onclick="document.getElementById('result').value+='+'">
-		<br>
-		<input type="button" value="4" onclick="document.getElementById('result').value+='4'">
-		<input type="button" value="5" onclick="document.getElementById('result').value+='5'">
-		<input type="button" value="6" onclick="document.getElementById('result').value+='6'">
-		<input type="button" value="-" onclick="document.getElementById('result').value+='-'">
-		<br>
-		<input type="button" value="7" onclick="document.getElementById('result').value+='7'">
-		<input type="button" value="8" onclick="document.getElementById('result').value+='8'">
-		<input type="button" value="9" onclick="document.getElementById('result').value+='9'">
-		<input type="button" value="*" onclick="document.getElementById('result').value+='*'">
-		<br>
-		<input type="button" value="C" onclick="document.getElementById('result').value=''">
-		<input type="button" value="0" onclick="document.getElementById('result').value+='0'">
-		<input type="button" value="=" onclick="document.getElementById('result').value=eval(document.getElementById('result').value)">
-		<input type="button" value="/" onclick="document.getElementById('result').value+='/'">
-	</form>
+	<div class="tong">
+    <div class="maytinh">
+		<input type="text" id="result" disabled>
+		<div class="button-row">
+		  <button onclick="addToResult('7')">7</button>
+		  <button onclick="addToResult('8')">8</button>
+		  <button onclick="addToResult('9')">9</button>
+		  <button onclick="addToResult('/')">/</button>
+		</div>
+		<div class="button-row">
+		  <button onclick="addToResult('4')">4</button>
+		  <button onclick="addToResult('5')">5</button>
+		  <button onclick="addToResult('6')">6</button>
+		  <button onclick="addToResult('*')">*</button>
+		</div>
+		<div class="button-row">
+		  <button onclick="addToResult('1')">1</button>
+		  <button onclick="addToResult('2')">2</button>
+		  <button onclick="addToResult('3')">3</button>
+		  <button onclick="addToResult('-')">-</button>
+		</div>
+		<div class="button-row">
+		  <button onclick="addToResult('0')">0</button>
+		  <button onclick="addToResult('.')">.</button>
+		  <button onclick="calculateResult()">=</button>
+		  <button onclick="addToResult('+')">+</button>
+		</div>
+		<div class="button-row">
+		  <button onclick="clearResult()">Xóa</button>
+		</div>
+	  </div>
+	</div>
+	  <script src="bai2.js"></script>
 </body>
 </html>
