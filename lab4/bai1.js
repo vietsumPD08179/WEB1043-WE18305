@@ -1,46 +1,60 @@
 class Student {
-    constructor(id, first_name, last_name, class_id, email, phone_number, dob) {
-      this.id = id;
-      this.first_name = first_name;
-      this.last_name = last_name;
-      this.class_id = class_id;
-      this.email = email;
-      this.phone_number = phone_number;
-      this.dob = new Date(dob);
-    }
-  
-    getFullName() {
-      return `${this.last_name} ${this.first_name}`;
-    }
-  
-    getAgeInYears() {
-      let today = new Date();
-      let age = today.getFullYear() - this.dob.getFullYear();
-      let m = today.getMonth() - this.dob.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < this.dob.getDate())) {
-        age--;
-      }
-      return age;
-    }
-  
-    getAgeInDays() {
-      let today = new Date();
-      let timeDiff = Math.abs(today.getTime() - this.dob.getTime());
-      let diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      return diffDays;
-    }
+  constructor(id, first_name, last_name, class_id, email, phone_number, dob) {
+    this.id = id;
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.class_id = class_id;
+    this.email = email;
+    this.phone_number = phone_number;
+    this.dob = dob;
   }
-  
-  let studentsList = [
-  new Student(1,'John','Doe',1,'john@example.com','123456789','2002-01-01'),
-  new Student(2,'Jane','Doe',1,'jane@example.com','123456789','2003-01-01'),
-  new Student(3,'Jim','Smith',1,'jim@example.com','123456789','2004-01-01'),
-  new Student(4,'Jackie','Chan',1,'jackie@example.com','123456789','2005-01-01'),
-  new Student(5,'Bruce','Lee',1,'bruce@example.com','123456789','2006-01-01')
-  ];
-  
-  studentsList.sort((a,b) => a.getAgeInDays()-b.getAgeInDays());
-  
-  console.log(studentsList);
-  
-  console.log(`Screen width: ${screen.width}, Screen height: ${screen.height}`);
+
+  // Phương thức lấy tên đầy đủ
+  getFullName() {
+    return `${this.last_name} ${this.first_name}`;
+  }
+
+  // Phương thức tính số tuổi hiện tại theo năm
+  getAgeByYear() {
+    const dob = new Date(this.dob);
+    const now = new Date();
+    const age = now.getFullYear() - dob.getFullYear();
+    if (
+      now.getMonth() < dob.getMonth() ||
+      (now.getMonth() === dob.getMonth() && now.getDate() < dob.getDate())
+    ) {
+      return age - 1;
+    }
+    return age;
+  }
+
+  // Phương thức tính số tuổi hiện tại theo ngày
+  getAgeByDay() {
+    const dob = new Date(this.dob);
+    const now = new Date();
+    const diff = now.getTime() - dob.getTime();
+    const age = Math.floor(diff / (1000 * 3600 * 24));
+    return age;
+  }
+}
+
+// Tạo danh sách sinh viên
+const students = [
+  new Student(1, "Tran", "Viet Sum", "A01", "sum@gmail.com", "0123456789", "2004-01-01"), 
+  new Student(2, "Nguyen", "The Hau", "B01", "hau@gmail.com", "0123456789", "2004-01-02"),
+  new Student(3, "Doan", "Anh Quy", "C02", "quy@gmail.com", "0123456789", "2004-01-03"),
+  new Student(4, "Tran", "Van Nhan", "D02", "Nhan@gmail.com", "0123456789", "2004-01-04"),
+  new Student(5, "Nguyen", "Van Ha", "D03", "Ha@gmail.com", "0123456789", "2004-01-05"),
+];
+
+// Sắp xếp danh sách sinh viên theo tuổi từ thấp đến cao
+students.sort((a, b) => a.getAgeByDay() - b.getAgeByDay());
+
+// In ra danh sách sinh viên đã sắp xếp
+document.write("Danh sách sinh viên theo thứ tự tuổi từ thấp đến cao:");
+students.forEach((student) =>
+document.write(`${student.getFullName()} - Tuổi: ${student.getAgeByDay()} ngày`)
+);
+
+// In ra width và height của màn hình
+document.write(`Width: ${window.innerWidth}px - Height: ${window.innerHeight}px`);
