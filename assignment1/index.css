@@ -2,7 +2,11 @@
   scroll-behavior: smooth;
 }
 
-
+.loo{
+  width: 120px;
+  border-radius: 5px;
+  margin-left: 100px;
+}
 body {
   padding: 0px;
   margin: 0px;
@@ -37,7 +41,7 @@ header {
   justify-content: space-between;
   background: rgb(233, 90, 90);
   box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
-  padding: 20px 100px;
+  padding: 20px ;
   transition: 0.5s;
 }
 
@@ -82,7 +86,7 @@ header {
 }
 
 .navbar a {
-  margin-left: 100px;
+  margin-left: 70px;
   justify-content: center;
   font-size: 1rem;
   font-weight: 500;
