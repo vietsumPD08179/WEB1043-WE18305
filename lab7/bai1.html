@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrapper {
+        width: 50%;
+        background-color: antiquewhite;
+        position: 20px;
+        font-family: ;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .left {
+        border: 5px solid salmon;
+        width: 150px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .right {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        justify-content: center;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid gray;
+        margin-bottom: 10px;
+        padding: 5px 20px 5px;
+    }
+
+    #one {
+        padding: 10px;
+        cursor: move;
+        z-index: 10;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <h5>Lab 7: drag & drop</h5>
+        <p>drag item from right column</p>
+        <div class="main">
+            <div class="left" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                BIN
+            </div>
+            <div class="right">
+                <span class="item" id="drag1" draggable="true" ondragstart="drag(event)">ONE</span>
+                <span class="item" id="drag2" draggable="true" ondragstart="drag(event)">TWO</span>
+                <span class="item" id="drag3" draggable="true" ondragstart="drag(event)">THREE</span>
+                <span class="item" id="drag4" draggable="true" ondragstart="drag(event)">FOUR</span>
+                <span class="item" id="drag5" draggable="true" ondragstart="drag(event)">FIVE</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+
+</html>
