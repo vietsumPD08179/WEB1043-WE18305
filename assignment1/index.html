@@ -1,163 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Hai lần cà phê</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image" href="image/logo.png">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
 </head>
+
 <body>
     <!-- page wrapper -->
     <div class="wrapper">
         <!-- header -->
-        <div class="header">
-            HEADER
-            <div class="logo">
-                <span class="logo1">
-                    LOGO
-                </span>
+        <header>
+            <a href="#" class="logo"><i class='bx bxs-coffee'></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <bx class="bx-menu" id="menu-icon"></bx>
+            <ul class="navbar">
+                <a href="#gioithieu" class="gioitieu">GIỚI THIỆU</a>
+                <a href="#thucdon">THỰC ĐƠN</a>
+                <a href="#tintuc">TIN TỨC</a>
+                <a href="#media">MEDIA</a>
+                <a href="#vechungtoi">VỀ CHÚNG TÔI</a>
+            </ul>
+            <div class="tim kiem">
+                <input type="search" placeholder="Tìm kiếm">
+                <button onclick="getLocation()">Vị trí</button>
+                <p id="demo"></p>
             </div>
-            <div class="menu">
-                <a href="">Gioi thieu</a>
-                <a href="">Thuc don</a>
-                <a href="">Tin tuc</a>
-                <a href="">Ve chung toi</a>
-                <div class="timkiem"><input name="keyword" id="keyword" type="text" class="text_search" placeholder="Từ khóa" value  ></div>
-            </div>
-        </div>
+        </header>
+        <!-- page wrapper -->
         <!-- slider/banner -->
-        <div class="banner">
-            SLIDER
-            <!-- Slideshow container -->
-    <div class="slideshow-container">
+        <section id="gioithieu">
+            <div class="header" id="id1">
+                <div class="banner">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <div class="slide first">
+                            <img src="image/img1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/img2.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/img3.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="image/img4.png" alt="">
+                        </div>
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="image/img1.jpg" style="width:100%">
-      <div class="text">Caption Text</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="image/img2.png" style="width:100%">
-      <div class="text">Caption Two</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="image/img3.png" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-        </div>
-        <!-- our services -->
-        <div class="service">
-            <!-- row 1 -->
-            <div class="service-row">
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                        san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                         san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                         san pham
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                        san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                        san pham 
-                    </span>
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
                 </div>
             </div>
-            <div class="service-row">
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                       san pham 
-                    </span>
+        </section>
+        <section id="thucdon">
+            <!-- our services -->
+            <div class="service" id="id2">
+                <!-- row 1 -->
+                <div class="service-row">
+                    <div class="item">
+                        <img src="image/anhsp1.jpg" alt="">
+                        <span class="item-des">
+                            Cà phê đen
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp2.jpg" alt="">
+                        <span class="item-des">
+                            Cà phê sữa
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp3.jpg" alt="">
+                        <span class="item-des">
+                            Phindi choco
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp4.jpg" alt="">
+                        <span class="item-des">
+                            Phindi thạch
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp5.jpg" alt="">
+                        <span class="item-des">
+                            Phindi kem
+                        </span>
+                    </div>
                 </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                        san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                       san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                       san pham 
-                    </span>
-                </div>
-                <div class="item">
-                    <span class="item-img">
-                        IMAGE
-                    </span>
-                    <span class="item-des">
-                        san pham 
-                    </span>
+                <div class="service-row">
+                    <div class="item">
+                        <img src="image/anhsp6.jpg" alt="">
+                        <span class="item-des">
+                            Phin đen đá
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp7.jpg" alt="">
+                        <span class="item-des">
+                            Bạc xỉu
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp8.jpg" alt="">
+                        <span class="item-des">
+                            MACCHIATO
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp9.jpg" alt="">
+                        <span class="item-des">
+                            CAPUCHINO
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="image/anhsp10.jpg" alt="">
+                        <span class="item-des">
+                            AMERICANO
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="news">
-            NEWS
-        </div>
-        <div class="footer">
-            FOOTER
-        </div>
+        </section>
+        <section class="about" id="tintuc">
+            <img src="image/img7.png" alt="">
+            <div class="about-text">
+                <span>Sản phẩm</span>
+                <p>CÀ PHÊ ESPRESSO CỦA CHÚNG TÔI, LATTE CỦA BẠN
+                    Cà phê espresso đậm vị và bốc hơi sữa - ngon tuyệt hảo khi thưởng thức riêng hay khi thêm đường.</p>
+                <a href="#" class="btn"> Mua ngay <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </section>
+        <section class="about1" id="tintuc">
+            <div class="about-text1">
+                <span>CƠ HỘI</span>
+                <p>
+                    Không chỉ là nhân viên, mà còn là cộng sự.</p>
+                <a href="#" class="btn"> Tham gia ngay <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+            <img src="image/img8.png" alt="">
+        </section>
+        <section id="media">
+            <div class="slider-3">
+                <div class="cacvideo">
+                    <div>
+                        <div class="video-1">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/M5K0hUNfbEQ"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="video-2">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/peSAOGieUlU"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="video-3">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hbJDipvf9wU"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="vechungtoi">
+            <div class="footer">
+                <form>
+                    <input type="text" id="name" placeholder="Họ và tên" name="name">
+                    <div class="lien-lac">
+                        <input type="text" id="name" placeholder="Sdt" name="phone">
+                        <input type="text" id="name" placeholder="Email" name="email">
+                    </div>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
     </div>
+    </section>
+    <section id="vechungtoi">
+        <div class="footer1">
+            <footer>
+                <div class="footer-content">
+                    <h3>Hai lần cà phê</h3>
+                    <p>Chần chừ gì mà không đến ngay quán Hai lần và phê ưng ý và CÀ PHÊ CÁI ĐÃ rồi làm gì thì làm bạn ơi?
+                    </p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2023 Hai lần cà phê. All rights reserved
+                </div>
+        </div>
+        </footer>
+    </section>
+    <script src="index.js"></script>
 </body>
+
 </html>
