@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #myVideo {
+    height: 500px;
+    margin: 0 auto;
+  }
+</style>
+
+<body>
+  <video id="myVideo">
+    <source id="mp4_src" src="video/ĐỒNG HỒ ĐẾM NGƯỢC 30s MP4 Phan Linh.mp4" type="video/mp4">
+  </video>
+<br>
+  <button onclick="playVid()" type="button">Play Video</button>
+  <button onclick="pauseVid()" type="button">Pause Video</button>
+  <button onclick="increaseVolume()">Tăng âm lượng</button>
+  <button onclick="decreaseVolume()">Giảm âm lượng</button>
+  <button onclick="stopVideo()">Dừng video</button>
+  <button>Bật lặp lại video
+  <input type="checkbox" onclick="toggleLoop()">
+  </button>
+  <script>
+    //play and pause
+    var x = document.getElementById("myVideo");
+
+    function playVid() {
+      x.play();
+    }
+
+    function pauseVid() {
+      x.pause();
+    }
+    var vid = document.getElementById("myVideo");
+
+    //tăng giảm âm lượng
+    function increaseVolume() {
+      var currentVolume = vid.volume;
+      if (currentVolume < 1) {
+        vid.volume += 0.2;
+      }
+    }
+
+    function decreaseVolume() {
+      var currentVolume = vid.volume;
+      if (currentVolume > 0) {
+        vid.volume -= 0.2;
+      }
+    }
+    var vid = document.getElementById("myVideo");
+
+    //dừng video và đưa thời gian về 0(stop)
+    function stopVideo() {
+      vid.pause();
+      vid.currentTime = 0;
+    }
+    //Tắt bật chức năng play lặp đi lặp lại
+    var vid = document.getElementById("myVideo");
+
+    function toggleLoop() {
+      vid.loop = !vid.loop;
+    }
+  </script>
+</body>
+
+</html>
